@@ -1,12 +1,13 @@
 <?php
 
 class DB{
-    private $dbname = 'cloudcontact';
-    private $dbhost = 'localhost';
-    private $dbuser = 'root';
-    private $dbpass = '';
 
     static function connect(){
+        $dbname = 'cloudcontact';
+        $dbhost = 'localhost';
+        $dbuser = 'root';
+        $dbpass = '';
+
         $pdo = new PDO('mysql:host=' . $dbhost . ';dbname=' . $dbname,
         $dbuser, $dbpass);
 
