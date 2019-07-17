@@ -27,7 +27,8 @@ $app->post('/v1/contacts/add',function(Request $request,Response $response,array
     $cont->setPhone($request->getParam('phone'));
     $cont->setAdress($request->getParam('adress'));
 
-    echo $cont->Save();
+    $cont->Save();
+    echo $cont->getContacts();
 });
 
 $app->delete('/v1/contacts/delete/{id}',function(Request $request,Response $response,array $args)
@@ -57,4 +58,5 @@ $app->put('/v1/contacts/edit/{id}',function(Request $request,Response $response,
     $cont->setAdress($request->getParam('adress'));
 
     echo $cont->Update();
+    echo $cont->getContacts();  
 });
